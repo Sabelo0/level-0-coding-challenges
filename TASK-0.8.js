@@ -1,8 +1,20 @@
 function displayHoursAndMinutes(number){
-    var hours = Math.floor(number/60)
-    var minutes = number % 60
+    let hours = Math.floor(number/60)
+    let minutes = number % 60
+    let finalTime = ""
 
-    return hours + " hrs " + minutes + " min"
+    if (hours === 1 && minutes === 1 ){
+        finalTime =  hours + " hour, " + minutes + " minute"
+    }else if( minutes === 1 ){
+        finalTime = hours + " hours, " + minutes + " minute"
+    }else if(hours===1){
+        finalTime = hours + " hour, " + minutes + " minutes"
+    }else{
+        finalTime = hours + " hours, " + minutes + " minutes"
+    }
+
+    
+    return finalTime
 }
 
-console.log(displayHoursAndMinutes(71))
+console.log(displayHoursAndMinutes(61))
