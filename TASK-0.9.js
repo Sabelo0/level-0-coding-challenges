@@ -1,13 +1,13 @@
 function locateVowels(string) {
     //Convert any uppercase letters to lowercase
     var string = string.toLowerCase()
-    var vowels = ["a","e","i","o","u"];
+    let vowels = ["a","e","i","o","u"];
        
     
-    var vowelsFound = [];
-    var remains = [];
+    let vowelsFound = [];
+    let remains = [];
     //Assigning vowels into its own array 
-       for (var i in string) {
+       for (const i in string) {
          if (vowels.includes(string[i])) {
             vowelsFound.push(string[i]);
             } else {
@@ -15,10 +15,9 @@ function locateVowels(string) {
             }
        }
     // removing any duplicate vowels 
-    var duplicates = [...new Set(vowelsFound)];
+    let duplicates = [...new Set(vowelsFound)];
     vowelsFound = duplicates
-    
-       return "Vowels: " + vowelsFound
+   console.log("Vowels: " + vowelsFound)
 }
 
 locateVowels("Umuzi"); 
